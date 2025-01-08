@@ -1,0 +1,90 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get In Touch!</title>
+    <link rel="stylesheet" href="style_contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap';
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- FORM Section -->
+  <body>
+    <header>
+        <nav>
+        <div class="navbar">
+          <a href="https://eraymond606.github.io/portfolio/">Home</a>
+        </div>
+        </nav>
+      </header>
+    <div class="reg__main">
+      <section class="reg__container">
+        <div class="form">
+          <header>Let's Connect!</header>
+          <!-- API Post method -->
+          <form
+            id="contactForm"
+            action="https://formspree.io/f/xqazoleb"
+            method="POST"
+          >
+            <div class="input__box">
+              <label>Full Name</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full name"
+                pattern="[A-Za-z]+ [A-Za-z]+"
+                required
+              />
+            </div>
+
+            <div class="input__box">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@example.com"
+                required
+              />
+            </div>
+            <div class="column">
+              <div class="input__box">
+                <label>Phone Number</label>
+                <input
+                  type="tel"
+                  name="number"
+                  placeholder="(xxx)-xxx-xxxx"
+                  pattern="\d{3}[\-]?\d{3}[\-]?\d{4}"
+                  required
+                />
+            </div>
+            </div> 
+            <div class="text__box">
+              <textarea
+                name="message"
+                placeholder="Your message..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" id="submitBtn">Send</button>
+          </form>
+          <div id="result"></div>
+        </div>
+      </section>
+    </div>
+    <!-- Submission and POST method script -->
+    <script src="contact.js"></script>
+    </script>
+  </body>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+</html>

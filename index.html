@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/ >
+    <meta
+      name="description"
+      content="Portfolio showcasing code snippets, skills, and contact info."
+    />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/946e5f85ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="portfolio-icon">
+          <a href="https://eraymond606.github.io/portfolio/">Portfolio</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <section class="hero">
+        <h1>Hello, I'm Liz!</h1>
+        <p>Information Tech student specializing in modern web experiences</p>
+        <a href="contact.html" class="cta-button">
+          <span class="text">Contact Me</span>
+        </a>
+      </section>
+    </header>
+
+    <main>
+      <section class="code-section" id="projects">
+        <h2>Featured Projects & Code Snippets</h2>
+        <div class="code-grid">
+          <!-- Code Card 1 -->
+          <div class="card">
+            <h3>Glowing Rainbow Border</h3>
+            <p>
+              These code snippet cards are animated with a conic-gradient rainbow effect.
+            </p>
+            <pre class="code-snippet"><code>
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after,
+.card::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    #ff4545,
+    #00ff99,
+    #006aff,
+    #ff0095,
+    #ff4545
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+          </code></pre>
+        </div>
+          <!-- Code Card 2 -->
+          <div class="card">
+            <h3>Glowing Rainbow Skill Bar</h3>
+            <p>Similarly, the skill bars below are animated with a linear gradient rainbow effect.</p>
+            <pre class="code-snippet"><code>
+@property --barAngle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+.skill-bar {
+  flex: 1;
+  height: 8px;
+  background: #bdc3c7;
+  border-radius: 4px;
+  padding: 2px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.skill-bar-fill {
+  position: relative;
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 1s ease;
+
+  background: linear-gradient(
+    90deg,
+    #ff4545 0%,
+    #ff0095 25%,
+    #00ff99 50%,
+    #006aff 75%,
+    #ff4545 100%
+  );
+
+  background-size: 200% 100%;
+  animation: rainbowWave 4s linear infinite;
+}
+
+.skill-bar-fill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: inherit;
+  animation: inherit; 
+  filter: blur(8px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+@keyframes rainbowWave {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -200% 0%;
+  }
+}
+
+          </code></pre>
+        </div>
+        </div>
+      </section>
+      <section class="project-section">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>Project Name</h3>
+            <p>Project Description</p>
+            <div class="card-links">
+              <a href="#" class="card-link">
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+              <a href="#" class="card-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <h3>Project Name</h3>
+            <p>Project Description</p>
+            <div class="card-links">
+              <a href="#" class="card-link">
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+              <a href="#" class="card-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <h3>Project Name</h3>
+            <p>Project Description</p>
+            <div class="card-links">
+              <a href="#" class="card-link">
+                <i class="fab fa-github"></i>
+                View Code
+              </a>
+              <a href="#" class="card-link">
+                <i class="fas fa-external-link-alt"></i>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skills-section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-chart">
+          <div class="skill">
+            <span class="skill-name">HTML / CSS</span>
+            <div class="skill-bar" data-level="90">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-name">JavaScript</span>
+            <div class="skill-bar" data-level="85">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-name">Figma</span>
+            <div class="skill-bar" data-level="85">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <span class="skill-name">Python</span>
+            <div class="skill-bar" data-level="75">
+              <div class="skill-bar-fill"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2024 Elizabeth Raymond. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/elizabeth-raymond-ab31831bb/" target="_blank" aria-label="LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/eraymond606" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+    </footer>
+
+    <script>
+      // Initialize skill bars
+      document.addEventListener('DOMContentLoaded', () => {
+        const skillSection = document.querySelector('#skills');
+        const skillBars = skillSection.querySelectorAll('.skill-bar');
+
+        let animated = false; 
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && !animated) {
+                // Animate the bars
+                skillBars.forEach((bar) => {
+                  const level = bar.getAttribute('data-level');
+                  const fill = bar.querySelector('.skill-bar-fill');
+                  fill.style.width = level + '%';
+                });
+                animated = true; 
+              }
+            });
+          },
+          {
+            threshold: 0.2,
+          }
+        );
+
+        observer.observe(skillSection);
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const ctaButton = document.querySelector('.cta-button');
+
+        ctaButton.addEventListener('mousemove', (e) => {
+          const rect = ctaButton.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+
+          const xPercent = (x / rect.width) * 100;
+          const yPercent = (y / rect.height) * 100;
+
+  
+          ctaButton.style.setProperty('--x', xPercent + '%');
+          ctaButton.style.setProperty('--y', yPercent + '%');
+        });
+      });
+    </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('pre code').forEach((block) => {
+      hljs.highlightElement(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
